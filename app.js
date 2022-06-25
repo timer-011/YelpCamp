@@ -15,7 +15,9 @@ const methodOverride = require('method-override');
 const campground = require('./models/campground');
 const User = require('./models/user');
 
-mongoose.connect('mongodb://localhost:27017/yelp-camp', { useNewUrlParser: true, useUnifiedTopology: true})
+const uri = process.env.MONGODB_URI;
+
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => {
         console.log("MONGO CONNECTION OPEN!!!")
     })
