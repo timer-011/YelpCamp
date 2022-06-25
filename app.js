@@ -92,8 +92,8 @@ const isloggedin = (req, res, next) => {
     next();
 }
 
-app.listen(3000, () => {
-    console.log('Serving on port 3000')
+app.listen(process.env.PORT || 3000, () => {
+    console.log(`Serving on port ${process.env.PORT}`);
 })
 
 app.get('/', (req, res) => {
