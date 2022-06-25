@@ -99,7 +99,8 @@ app.listen(process.env.PORT || 3000, () => {
 })
 
 app.get('/', (req, res) => {
-    res.redirect('/campgrounds');
+    res.send('it is ok');
+    // res.redirect('/campgrounds');
 })
 
 app.get('/register', (req, res) => {
